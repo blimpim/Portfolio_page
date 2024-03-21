@@ -1,0 +1,23 @@
+@import 'src/Variables.scss';
+
+.marquee {
+  display: flex;
+  justify-content: center;
+  background-color: $orange;
+
+  & > li {
+    color: $neon;
+    font-size: $h3-font-size;
+    line-height: $line-height-sm;
+    margin-right: 4rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .marquee li {
+    font-size: $h4-font-size;
+    margin-right: 2rem;
+  }
+}

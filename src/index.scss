@@ -1,0 +1,52 @@
+@import './Variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+:root {
+  font-family: Rubik, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: $line-height-base;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  // max-width: 1728px;
+  text-transform: uppercase;
+  background-color: $light-gray;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-img {
+  height: 95vh;
+  background-size:
+    76vw 65vh,
+    100vw 100vh;
+  background-image: url(/src/assets/images/M.png), url(/src/assets/images/Background_main.png);
+  background-repeat: no-repeat;
+  background-position:
+    left 15vw bottom,
+    left 50vw bottom;
+  margin-bottom: 6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .bg-img {
+    background-image: none;
+    margin-bottom: 12rem;
+  }
+}

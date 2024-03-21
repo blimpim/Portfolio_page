@@ -1,0 +1,151 @@
+@use '../Button/Button';
+
+@import 'src/Variables.scss';
+
+h2 {
+  margin: 4rem 0 0 10rem;
+  font-size: $h3-font-size;
+  color: $orange;
+}
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  margin: 4rem auto auto 8rem;
+
+  > div {
+    display: inline-flex;
+  }
+}
+
+label {
+  color: $orange;
+  font-size: $h4-font-size;
+  margin: 1rem;
+}
+
+.formItem {
+  min-width: 40vw;
+  max-height: 3rem;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  font-size: $h4-font-size;
+  vertical-align: text-bottom;
+}
+
+.input {
+  display: inline-block;
+  min-width: 20vw;
+  font-size: $h4-font-size;
+  text-transform: uppercase;
+  background-color: $light-gray;
+  border: none;
+  border-bottom: 0.2rem dashed $orange;
+  outline: none;
+  caret-color: $orange;
+  color: $orange;
+
+  &:focus {
+    border-bottom: 0.2rem solid $orange;
+  }
+}
+
+#formText {
+  display: block;
+  padding: 1rem;
+}
+
+.Button {
+  @include Button.standartButton;
+  height: 5rem;
+  width: 20rem;
+  margin: 2rem 2rem 0;
+  color: $orange;
+  background-color: $light-gray;
+  border: 0.3rem solid $orange;
+
+  &:hover {
+    background-color: $orange;
+    color: $light-gray;
+  }
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: $orange $light-gray;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $light-gray;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $orange;
+  border-radius: 10px;
+  border: 0px solid $orange;
+}
+
+textarea {
+  display: flex;
+  min-height: 1rem;
+  max-height: 20rem;
+  width: 90%;
+  margin: 1rem;
+  padding: 1rem;
+  color: $orange;
+  font-size: $h4-font-size;
+  border-radius: 1rem;
+  border: 0.1rem solid $orange;
+  background-color: $light-gray;
+
+  &:focus {
+    border: 0.1rem solid $orange;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Styles for tablets and phones */
+  h2 {
+    margin: 2rem 0 2rem 2rem;
+  }
+
+  .Contact {
+    margin: 1rem;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .formItem {
+    padding-bottom: 4rem;
+  }
+
+  label {
+    margin: auto;
+    font-size: $h5-font-size;
+  }
+
+  .input {
+    min-width: 80vw;
+    padding-top: 1rem;
+  }
+
+  textarea {
+    display: block;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .Button {
+    margin: 2rem auto 2rem auto;
+  }
+}

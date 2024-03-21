@@ -1,0 +1,124 @@
+@import 'src/Variables.scss';
+
+#skillHeader {
+  margin: 6rem 0 0 20rem;
+  font-size: $h3-font-size;
+  color: $orange;
+}
+
+.Skills {
+  display: inline-flex;
+  position: relative;
+  margin: 2rem auto 4rem 20rem;
+  font-size: $h4-font-size;
+  text-align: end;
+}
+
+.PhotoCard {
+  position: absolute;
+  top: 4vh;
+  align-items: center;
+  height: 70vh;
+  z-index: 0;
+  transition: right 1s;
+  width: auto;
+  border: 1rem solid $orange;
+  border-radius: 30px;
+}
+
+.skillsCard {
+  display: flex;
+  flex-wrap: wrap;
+  height: 85vh;
+  width: 45vw;
+  background-image: url(/src/assets/images/Gradient_skill.png);
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  border-radius: 2rem;
+  z-index: 2;
+  text-align: start;
+  padding-left: 4rem;
+  padding-right: 20rem;
+  margin-right: -20rem;
+
+  > div {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 4rem;
+
+    > p {
+      text-align: right;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      font-size: $h5-font-size;
+      line-height: $line-height-lg;
+      color: $light-gray;
+    }
+  }
+
+  > h3 {
+    width: 45vw;
+    height: fit-content;
+    margin-right: 4rem;
+    padding: 1rem;
+    color: $neon;
+    background-color: $orange;
+    border-radius: 1rem;
+  }
+
+  li {
+    font-size: $h4-font-size;
+    line-height: $line-height-sm;
+    color: $light-gray;
+    font-weight: lighter;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #skillHeader {
+    margin: 4rem 0 0 0;
+    padding: 2rem 0 2rem 2rem;
+    width: 100%;
+    box-sizing: border-box; /* Указывает, что ширина элемента включает в себя padding и border */
+    font-size: $h4-font-size;
+    color: $neon;
+    background-color: $orange;
+    text-align: left;
+  }
+  .Skills {
+    margin: 1rem 2rem 0 2rem;
+  }
+
+  .PhotoCard {
+    display: none;
+  }
+  h3 {
+    display: none;
+  }
+  .skillsCard {
+    width: 100%;
+    background-image: none;
+    padding-left: 0;
+    text-align: left;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    div > ul > li {
+      color: $orange;
+      line-height: $line-height-base;
+    }
+
+    div p {
+      display: flex;
+      width: 100%;
+      text-align: left;
+      padding-left: 0;
+      padding-right: 0;
+      font-size: $h5-font-size;
+      color: $bordo;
+    }
+  }
+}

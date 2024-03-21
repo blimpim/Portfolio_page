@@ -1,0 +1,49 @@
+@import 'src/Variables.scss';
+
+.mainSection {
+  position: relative;
+  overflow: visible;
+  text-align: left;
+  margin-left: 50vw;
+  padding: 5rem;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12vh;
+  }
+
+  > h1 {
+    font-size: $h2-font-size;
+    color: $light-gray;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mainSection {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 19rem;
+    background-size: cover;
+    background-image: url(/src/assets/images/Background_main.png);
+    background-repeat: no-repeat;
+
+    > h1 {
+      margin: 0;
+      padding: 2rem;
+      font-size: $h3-font-size * 1.7;
+      line-height: $line-height-sm;
+      color: $orange;
+      background-color: $neon;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+  }
+}

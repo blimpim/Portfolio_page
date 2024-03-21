@@ -1,0 +1,80 @@
+@import 'src/Variables.scss';
+
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 4rem 0;
+  background-image: url(/src/assets/images/Gradient_works.png);
+  background-size: cover;
+  font-size: $h5-font-size;
+  color: $bordo;
+}
+
+.worksCard {
+  margin-bottom: 4rem;
+
+  h1 {
+    font-size: $h3-font-size;
+    color: $neon;
+  }
+
+  img {
+    margin-top: 4rem;
+    max-width: 80vw;
+    border-radius: 1rem;
+    border: 0.15rem solid $neon;
+  }
+  a {
+    padding-right: 3rem;
+    font-size: $h5-font-size;
+    text-decoration: none;
+    color: $neon;
+  }
+
+  .date {
+    color: $neon;
+    font-size: $h5-font-size;
+  }
+
+  span:first-child {
+    color: $neon;
+  }
+
+  #worksCount {
+    color: $bordo;
+  }
+
+  .links_time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2rem;
+    line-height: $line-height-sm;
+
+    & > div {
+      text-align: end;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .worksCard {
+    margin: 2rem 2rem auto 2rem;
+  }
+
+  .links_time ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+  }
+
+  .links_time ul li a {
+    padding: 0.5rem 0;
+  }
+
+  .links_time > div {
+    display: none;
+  }
+}

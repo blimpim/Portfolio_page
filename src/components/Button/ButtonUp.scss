@@ -1,0 +1,25 @@
+@import 'src/Variables.scss';
+
+.buttonUp {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  bottom: 6rem;
+  right: 0rem;
+  margin-left: 85vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .buttonUp {
+    display: flex;
+    justify-content: center;
+    bottom: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4rem;
+
+    button a svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
