@@ -1,4 +1,4 @@
-import './Media.scss';
+import './media.scss';
 
 import { media } from './media_data';
 import SocialLink from './SocialLink';
