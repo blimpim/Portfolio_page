@@ -1,4 +1,4 @@
-import './Media.scss';
+import './media.scss';
 
 export default function SocialLink({ d, fill }) {
   return (

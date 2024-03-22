@@ -46,7 +46,9 @@ ul {
 
 @media only screen and (max-width: 768px) {
   .bg-img {
+    height: fit-content;
     background-image: none;
-    margin-bottom: 12rem;
+    margin: 0;
+    padding: 0;
   }
 }

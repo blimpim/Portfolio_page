@@ -59,19 +59,18 @@
   .header {
     display: flex;
     flex-direction: column;
-    height: 10rem;
+    height: fit-content;
     margin: 0;
     padding: 0;
-    margin-bottom: 11rem;
     font-size: $h5-font-size;
-    justify-content: space-between;
     border-bottom: none;
+    background-color: $orange;
   }
   .leftSide {
     flex-direction: row;
     margin: 0;
-    padding-top: 2rem;
-    align-self: baseline;
+    padding-top: 1rem;
+    align-self: center;
     background-color: $orange;
 
     & > a {
