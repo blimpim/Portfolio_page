@@ -20,7 +20,7 @@ export default function PhotoCard() {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{ right: isHovered ? '-25vw' : '-13vw' }}
-        src="/src/assets/images/IMG_1279.JPG"
+        src="../../assets/images/IMG_1279.JPG"
         alt="Photo of me"
       />
     </section>

@@ -11,8 +11,8 @@ export const works = [
     },
 
     date: 'JUL 2023',
-    src: './src/assets/images/adant_desk.png',
-    src_mob: './src/assets/images/adant_mob.png',
+    src: '../../assets/images/adant_desk.png',
+    src_mob: '../../src/assets/images/adant_mob.png',
     alt: 'ADANT Company',
   },
   {
@@ -26,8 +26,8 @@ export const works = [
     },
 
     date: 'APR 2023',
-    src: './src/assets/images/den_desk.png',
-    src_mob: './src/assets/images/den_mob.png',
+    src: '../../src/assets/images/den_desk.png',
+    src_mob: '../../src/assets/images/den_mob.png',
     alt: 'IT Specialist CV',
   },
 ];
