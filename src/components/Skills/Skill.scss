@@ -1,4 +1,4 @@
-@import 'src/Variables.scss';
+@import '/src/Variables.scss';
 
 #skillHeader {
   margin: 6rem 0 0 20rem;
@@ -31,7 +31,7 @@
   flex-wrap: wrap;
   height: 85vh;
   width: 45vw;
-  background-image: url(/src/assets/images/Gradient_skill.png);
+  background-image: url(/assets/images/Gradient_skill.png);
   background-repeat: no-repeat;
   background-size: 100vh;
   border-radius: 2rem;
@@ -79,7 +79,7 @@
     margin: 4rem 0 0 0;
     padding: 2rem 0 2rem 2rem;
     width: 100%;
-    box-sizing: border-box; /* Указывает, что ширина элемента включает в себя padding и border */
+    box-sizing: border-box;
     font-size: $h4-font-size;
     color: $neon;
     background-color: $orange;
