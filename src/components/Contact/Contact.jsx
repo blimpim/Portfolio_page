@@ -1,88 +1,65 @@
 import Media from '../Media/Media';
 import './Contact.scss';
 
-// import { useState, useRef } from 'react';
-// import ReCAPTCHA from 'react-google-recaptcha';
+import { useState } from 'react';
 
-export default function Contact(props) {
-  /*const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const recaptchaRef = useRef(); 
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
+export default function Contact() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
     e.preventDefault();
 
-    recaptchaRef.current.execute();
   };
 
-  const handleRecaptchaChange = async (token) => {
-    try {
-      const response = await fetch('http://localhost:3000/submit-form', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ ...formData, recaptchaToken: token }), 
-      });
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    }
-  };*/
-
-  function sendEmail() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
   
-    // Кодирование данных для URL
-    let emailBody = 'Name: ' + encodeURIComponent(name) +
-                    '%0AEmail: ' + encodeURIComponent(email) +
-                    '%0A%0AMessage: ' + encodeURIComponent(message);
-  
-    // Создание ссылки mailto
-    let mailtoLink = 'mailto:blimpim@gmail.com.com?subject=' +
-                     encodeURIComponent('Job opportunity from ' + name) +
-                     '&body=' + emailBody;
-  
-    // Открытие ссылки
-    window.location.href = mailtoLink;
-  }
-  
-
   return (
-    <section id={props.id}>
+    <section>
       <h2>Get in touch</h2>
-      <form className="Contact" >
+
+      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+      <form className="Contact" name="contact" method="post" onSubmit={handleSubmit} >
+      <input type="hidden" name="form-name" value="contact" />
         <div>
           <div className="formItem">
             <label>Name</label>
-            <input type="text" name="name" id='name' className="input" placeholder="John Doe"  />
+            <input type="text" name="name" className="input" placeholder="" value={formData.name} onChange={handleChange} />
           </div>
           <div className="formItem">
             <label>Email</label>
-            <input type="email" name="email" id='email' className="input" placeholder="johndoe@gmail.com" />
+            <input type="email" name="email" className="input" placeholder="" value={formData.email} onChange={handleChange} />
           </div>
         </div>
 
         <div id="formText">
           <label>Message</label>
-          <textarea name="message" type="text" id='message' placeholder="Your message here..."></textarea>
+          <textarea name="message" type="text" value={formData.message} onChange={handleChange}></textarea>
         </div>
 
         
-        {/* <ReCAPTCHA
-          ref={recaptchaRef} 
-          sitekey="6Ldc2nwpAAAAAFDlc2xhK42D8A-jxDGXhdrXz_Bn"
-          onChange={handleRecaptchaChange}
-          size="invisible"
-        /> */}
-
-        <input className="Button" type="submit" value="Send" onClick={sendEmail}></input>
+  
+        <input className="Button" type="submit" value="Send"></input>
       </form>
 
       <Media fill="#A44234" className="_Contact" />
