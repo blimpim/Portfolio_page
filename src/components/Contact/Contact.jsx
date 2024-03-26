@@ -20,16 +20,16 @@ export default function Contact() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formData })
+      body: encode({ "form-name": "contactForm", ...formData })
     })
     .then(() => alert("Your message has been sent!"))
     .catch(error => alert(error));
   };
 
   return (
-    <section>
+    <section id='contactSection'>
       <h2>Get in touch</h2>
-      <form name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form name="contactForm" className="Contact" onSubmit={handleSubmit} method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <div className="formItem">

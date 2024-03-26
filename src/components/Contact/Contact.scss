@@ -3,7 +3,7 @@
 @import 'src/Variables.scss';
 
 h2 {
-  margin: 4rem 0 0 10rem;
+  margin: 4rem 0 0 12rem;
   font-size: $h3-font-size;
   color: $orange;
 }
@@ -12,7 +12,7 @@ h2 {
   display: flex;
   flex-direction: column;
   max-width: 90vw;
-  margin: 4rem auto auto 8rem;
+  margin: 4rem auto auto 10rem;
 
   > div {
     display: inline-flex;
@@ -46,13 +46,31 @@ label {
   color: $orange;
 
   &:focus {
-    border-bottom: 0.2rem solid $orange;
+    border-bottom: 0.3rem dashed $orange;
   }
 }
 
 #formText {
   display: block;
   padding: 1rem;
+  
+  textarea {
+    display: flex;
+    min-height: 1rem;
+    max-height: 20rem;
+    width: 90%;
+    margin: 1rem;
+    padding: 1rem;
+    color: $orange;
+    font-size: $h4-font-size;
+    border: 0.1rem solid $orange;
+    border-radius: 1rem;
+    background-color: $light-gray;
+  
+    &:focus {
+      border: 0.2rem solid $orange;
+    }
+  }
 }
 
 .Button {
@@ -69,6 +87,8 @@ label {
     color: $light-gray;
   }
 }
+
+
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -92,23 +112,7 @@ label {
   border: 0px solid $orange;
 }
 
-textarea {
-  display: flex;
-  min-height: 1rem;
-  max-height: 20rem;
-  width: 90%;
-  margin: 1rem;
-  padding: 1rem;
-  color: $orange;
-  font-size: $h4-font-size;
-  border-radius: 1rem;
-  border: 0.1rem solid $orange;
-  background-color: $light-gray;
 
-  &:focus {
-    border: 0.1rem solid $orange;
-  }
-}
 
 @media only screen and (max-width: 768px) {
   /* Styles for tablets and phones */
