@@ -18,11 +18,11 @@ export default function App() {
         </div>
         <MarqueeLine el1="Let’s  do smth special" el2="text me now" el3="let’s do a team" />
         <div>
-          <Skills />
+          <Skills id="skillsSection"/>
           <MarqueeLine el1="Works" el2="Works" el3="Works" />
-          <Works />
+          <Works id="worksSection"/>
           <MarqueeLine el1="CONTACT" el2="CONTACT" el3="CONTACT" />
-          <Contact />
+          <Contact id="contactSection"/>
           <ButtonUp />
         </div>
       </main>

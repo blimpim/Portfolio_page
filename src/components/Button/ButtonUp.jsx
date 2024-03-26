@@ -1,13 +1,12 @@
+import { animateScroll as scroll } from 'react-scroll';
+
 import './ButtonUp.scss';
 
 export default function ButtonUp() {
-  function scrollToTop() {
-    window.scrollTo(0, 0);
-  }
-
+  
   return (
     <div className="buttonUp">
-      <button onClick={scrollToTop}>
+      <button onClick={() => scroll.scrollToTop()}>
         <a>
           <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path

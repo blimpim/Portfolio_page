@@ -1,8 +1,10 @@
-@import 'src/Variables.scss';
+@import '/src/Variables.scss';
 
 button {
   border: none;
   background-color: rgba(221, 229, 229, 0);
+  text-transform: uppercase;
+  color: $bordo;
 }
 
 @mixin standartButton {
@@ -24,6 +26,11 @@ button {
   background-color: $neon;
   cursor: pointer;
   transition: border-color 0.25s;
+
+  a {
+    text-decoration: none;
+    color: $bordo;
+  }
 }
 .button:hover {
   border-color: $neon;
@@ -41,5 +48,12 @@ button {
     margin: 0 1rem 1.5rem 1rem;
     background-color: $orange;
     color: $neon;
+
+    a {
+      text-decoration: none;
+      color: $neon;
+    }
   }
+
+
 }

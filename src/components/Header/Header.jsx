@@ -1,12 +1,15 @@
+import { Link } from 'react-scroll';
+
 import './Header.scss';
+
 
 export default function Header() {
   return (
     <section className={'header'}>
       <div className="leftSide">
-        <a href="/src/App/<Skills/>">Skills</a>
-        <a href="/src/App/<Works/>">Works</a>
-        <a href="<Contact/>">Contact</a>
+        <Link to="skillsSection" smooth={true} duration={500}>Skills</Link>
+        <Link to="worksSection" smooth={true} duration={500}>Works</Link>
+        <Link to="contactSection" smooth={true} duration={500}>Contact</Link>
       </div>
       <div className="frontDev">
         <h1 id={'front'}>FRONTEND </h1>
