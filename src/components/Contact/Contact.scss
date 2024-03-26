@@ -126,29 +126,52 @@ label {
     > div {
       display: flex;
       flex-direction: column;
-    }
-  }
+}
+}
+}
 
-  .formItem {
-    padding-bottom: 4rem;
-  }
-
+.formItem {
+  padding-bottom: 4rem;
   label {
     margin: auto;
+    padding-bottom: 1rem;
     font-size: $h5-font-size;
   }
+  input {
+  width: 80vw;
+  font-size: $h5-font-size;
 
-  .input {
-    min-width: 80vw;
-    padding-top: 1rem;
+  }
+
+}
+#formText {
+  &>label {
+    margin: auto;
+  font-size: $h5-font-size;
+
   }
 
   textarea {
     display: block;
-    margin: 2rem 0 2rem 0;
+    padding: 1rem 1rem 2rem 1rem;
+    margin: 0;
+    margin-top: 2rem;
+    font-size: $h5-font-size;
   }
+  
+}
 
   .Button {
     margin: 2rem auto 2rem auto;
   }
-}
+
+
+  ::-ms-input-placeholder { /* Edge 12-18 */
+    color: $dark-gray;
+    opacity: 0.4;
+  }
+  
+  ::placeholder {
+    color: $dark-gray;
+    opacity: 0.4;
+  }
