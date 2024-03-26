@@ -44,17 +44,17 @@ export default function Contact() {
         <div>
           <div className="formItem">
             <label>Name</label>
-            <input type="text" name="name" className="input" placeholder="" value={formData.name} onChange={handleChange} />
+            <input type="text" name="name" className="input" placeholder="John Doe" value={formData.name} onChange={handleChange} />
           </div>
           <div className="formItem">
             <label>Email</label>
-            <input type="email" name="email" className="input" placeholder="" value={formData.email} onChange={handleChange} />
+            <input type="email" name="email" className="input" placeholder="johndoe@gmail.com" value={formData.email} onChange={handleChange} />
           </div>
         </div>
 
         <div id="formText">
           <label>Message</label>
-          <textarea name="message" type="text" value={formData.message} onChange={handleChange}></textarea>
+          <textarea name="message" type="text" placeholder="Your message here..." value={formData.message} onChange={handleChange}></textarea>
         </div>
 
         
