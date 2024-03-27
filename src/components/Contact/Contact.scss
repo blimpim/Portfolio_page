@@ -3,7 +3,7 @@
 @import 'src/Variables.scss';
 
 h2 {
-  margin: 4rem 0 0 12rem;
+  margin: 4rem 0 0 11rem;
   font-size: $h3-font-size;
   color: $orange;
 }
@@ -11,33 +11,40 @@ h2 {
 .Contact {
   display: flex;
   flex-direction: column;
-  max-width: 90vw;
+  flex-wrap: nowrap;
+
   margin: 4rem auto auto 10rem;
 
-  > div {
-    display: inline-flex;
+  & > div {
+    display: flex;
+    flex-direction: row;
   }
-}
 
-label {
-  color: $orange;
-  font-size: $h4-font-size;
-  margin: 1rem;
-}
+
+  label {
+    color: $orange;
+    font-size: $h4-font-size;
+  }
 
 .formItem {
-  min-width: 40vw;
-  max-height: 3rem;
-  padding: 1rem;
-  padding-bottom: 3rem;
+  display: flex;
+  flex: 1;
+  padding-right: 2rem;
+  margin-left: 1rem;
   font-size: $h4-font-size;
-  vertical-align: text-bottom;
-}
 
-.input {
-  display: inline-block;
-  min-width: 20vw;
-  font-size: $h4-font-size;
+  label {
+  color: $orange;
+  margin: 0;
+  margin-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 0;
+  }
+
+  input {
+  width: auto;
+  padding: 1rem;
+  padding-right: 20rem;
   background-color: $light-gray;
   border: none;
   border-bottom: 0.2rem dashed $orange;
@@ -48,21 +55,27 @@ label {
   &:focus {
     border-bottom: 0.3rem dashed $orange;
   }
+ }
 }
 
+
 #formText {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
+
+  label {
+    margin: 0;
+    }
   
   textarea {
-    display: flex;
     min-height: 1rem;
     max-height: 20rem;
-    width: 90%;
-    margin: 1rem;
+    max-width: 90%;
+    margin: 1rem 0 1rem 0;
     padding: 1rem;
     color: $orange;
-    font-size: $h4-font-size;
+    font-size: $h5-font-size;
     border: 0.1rem solid $orange;
     border-radius: 1rem;
     background-color: $light-gray;
@@ -77,7 +90,7 @@ label {
   @include Button.standartButton;
   height: 5rem;
   width: 20rem;
-  margin: 2rem 2rem 0;
+  margin: 2rem 2rem 0 1rem;
   color: $orange;
   background-color: $light-gray;
   border: 0.3rem solid $orange;
@@ -87,7 +100,7 @@ label {
     color: $light-gray;
   }
 }
-
+}
 
 
 /* ===== Scrollbar CSS ===== */
@@ -131,28 +144,29 @@ label {
 }
 
 .formItem {
+  flex-direction: column;
   padding-bottom: 4rem;
+  
   label {
     margin: auto;
     padding-bottom: 1rem;
     font-size: $h5-font-size;
   }
   input {
-  width: 80vw;
+  max-width: 8rem;
   font-size: $h5-font-size;
 
   }
 
 }
 #formText {
-  &>label {
+  & > label {
     margin: auto;
   font-size: $h5-font-size;
 
   }
 
   textarea {
-    display: block;
     padding: 1rem 1rem 2rem 1rem;
     margin: 0;
     margin-top: 2rem;

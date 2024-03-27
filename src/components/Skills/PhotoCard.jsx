@@ -2,27 +2,15 @@ import { useState } from 'react';
 import './Skill.scss';
 
 export default function PhotoCard() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    console.log('hovered');
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
+  const handleClick = () => {
+    setIsClicked(!isClicked); 
+    console.log('clicked', !isClicked); 
   };
 
   return (
-    <section>
-      <img
-        className="PhotoCard"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        style={{ right: isHovered ? '-25vw' : '-13vw' }}
-        src="/assets/images/IMG_1279.JPG"
-        alt="Photo of me"
-      />
-    </section>
-  );
-}
+    <div className="PhotoCard" onClick={handleClick} style={{ left: isClicked ? '90%' : '60%' }}>
+      
+    </div>
+  );}

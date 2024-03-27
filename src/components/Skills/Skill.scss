@@ -16,44 +16,40 @@
 
 .PhotoCard {
   position: absolute;
-  top: 4vh;
+  height: 43rem;
+  width: 45%;
+  margin-top: 2.5rem;
   align-items: center;
-  height: 70vh;
   z-index: 0;
-  transition: right 1s;
-  width: auto;
+  transition: left 1s;
   border: 1rem solid $orange;
   border-radius: 30px;
+  background-image: url(/assets/images/IMG_1279.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
 }
 
 .skillsCard {
   display: flex;
-  flex-wrap: wrap;
-  height: 85vh;
-  width: 45vw;
+  flex-direction: column;
+  height: 50rem;
+  width: auto;
   background-image: url(/assets/images/Gradient_skill.png);
   background-repeat: no-repeat;
-  background-size: 100vh;
+  background-size: cover;
   border-radius: 2rem;
+  margin-bottom: 6rem;
   z-index: 2;
   text-align: start;
   padding-left: 4rem;
-  padding-right: 20rem;
-  margin-right: -20rem;
+ 
 
   > div {
     display: flex;
     flex-direction: row;
-    padding-bottom: 4rem;
-
-    > p {
-      text-align: right;
-      padding-left: 4rem;
-      padding-right: 4rem;
-      font-size: $h5-font-size;
-      line-height: $line-height-lg;
-      color: $light-gray;
-    }
+    margin-top: 2rem;
+    
   }
 
   > h3 {
@@ -68,7 +64,7 @@
 
   li {
     font-size: $h4-font-size;
-    line-height: $line-height-sm;
+    line-height: $line-height-lg;
     color: $light-gray;
     font-weight: lighter;
   }
@@ -86,7 +82,7 @@
     text-align: left;
   }
   .Skills {
-    margin: 1rem 2rem 0 2rem;
+    margin: 2rem 2rem 0 2rem;
   }
 
   .PhotoCard {
@@ -97,6 +93,7 @@
   }
   .skillsCard {
     width: 100%;
+    height: fit-content;
     background-image: none;
     padding-left: 0;
     text-align: left;
@@ -111,14 +108,6 @@
       line-height: $line-height-base;
     }
 
-    div p {
-      display: flex;
-      width: 100%;
-      text-align: left;
-      padding-left: 0;
-      padding-right: 0;
-      font-size: $h5-font-size;
-      color: $bordo;
-    }
+    
   }
 }

@@ -29,9 +29,9 @@ export default function WorkCard({ work, length }) {
         <div className="links_time">
           <ul>
             <li key={work.links.page}>
-              <a href={work.links.page}>link for page/</a>
-              <a href={work.links.code}> link for code/</a>
-              <a href={work.links.design}>link for design/</a>
+              <a href={work.links.page} target="_blank" rel="noopener noreferrer">link for page/</a>
+              <a href={work.links.code} target="_blank" rel="noopener noreferrer"> link for code/</a>
+              <a href={work.links.design} target="_blank" rel="noopener noreferrer">link for design/</a>
             </li>
           </ul>
           <div>
@@ -41,7 +41,9 @@ export default function WorkCard({ work, length }) {
             </p>
           </div>
         </div>
+        <a href={work.links.page} target="_blank" rel="noopener noreferrer">
         <img src={image} alt={work.alt} />
+        </a> 
       </li>
     </>
   );

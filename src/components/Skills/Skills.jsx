@@ -5,7 +5,7 @@ import './Skill.scss';
 export default function Skills(props) {
   return (
     <section id={props.id}>
-      <h2 id="skillHeader">About me & Skills</h2>
+      <h2 id="skillHeader">Skills</h2>
 
       <div className="Skills">
         <SkillsCard />

@@ -16,10 +16,10 @@ export default function App() {
           <Header />
           <MainSection />
         </div>
-        <MarqueeLine el1="Let’s  do smth special" el2="text me now" el3="let’s do a team" />
+        <MarqueeLine el1="Let’s  do something special" el2="text me now" el3="let’s make a team" />
         <div>
           <Skills id="skillsSection"/>
-          <MarqueeLine el1="Works" el2="Works" el3="Works" />
+          <MarqueeLine el1="Project" el2="Project" el3="Project" />
           <Works id="worksSection"/>
           <MarqueeLine el1="CONTACT" el2="CONTACT" el3="CONTACT" />
           <Contact id="contactSection"/>

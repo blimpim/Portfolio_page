@@ -8,7 +8,7 @@ export default function Header() {
     <section className={'header'}>
       <div className="leftSide">
         <Link to="skillsSection" smooth={true} duration={500}>Skills</Link>
-        <Link to="worksSection" smooth={true} duration={500}>Works</Link>
+        <Link to="worksSection" smooth={true} duration={500}>Projects</Link>
         <Link to="contactSection" smooth={true} duration={500}>Contact</Link>
       </div>
       <div className="frontDev">
