@@ -1,24 +1,31 @@
 @import '/src/Variables.scss';
 
-#skillHeader {
-  margin: 6rem 0 0 20rem;
-  font-size: $h3-font-size;
-  color: $orange;
-}
-
 .Skills {
-  display: inline-flex;
-  position: relative;
-  margin: 2rem auto 4rem 20rem;
-  font-size: $h4-font-size;
-  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 10rem;
+
+  & > h2 {
+    margin-bottom: 2rem;
+  }
+  > div {
+    display: inline-flex;
+    position: relative;
+    margin-left: inherit;
+    margin-right: inherit;
+    font-size: $h4-font-size;
+    text-align: end;
+  }
 }
 
 .PhotoCard {
   position: absolute;
-  height: 43rem;
+  height: 38rem;
   width: 45%;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   align-items: center;
   z-index: 0;
   transition: left 1s;
@@ -33,7 +40,7 @@
 .skillsCard {
   display: flex;
   flex-direction: column;
-  height: 50rem;
+  height: 45rem;
   width: auto;
   background-image: url(/assets/images/Gradient_skill.png);
   background-repeat: no-repeat;
@@ -43,13 +50,11 @@
   z-index: 2;
   text-align: start;
   padding-left: 4rem;
- 
 
   > div {
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
-    
   }
 
   > h3 {
@@ -107,7 +112,5 @@
       color: $orange;
       line-height: $line-height-base;
     }
-
-    
   }
 }

@@ -30,25 +30,3 @@ ul {
   padding: 0;
   margin: 0;
 }
-
-.bg-img {
-  height: 95vh;
-  background-size:
-    76vw 65vh,
-    100vw 100vh;
-  background-image: url(/assets/images/M.png), url(/assets/images/Background_main.png);
-  background-repeat: no-repeat;
-  background-position:
-    left 15vw bottom,
-    left 50vw bottom;
-  margin-bottom: 6rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .bg-img {
-    height: fit-content;
-    background-image: none;
-    margin: 0;
-    padding: 0;
-  }
-}

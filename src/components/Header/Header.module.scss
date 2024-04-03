@@ -1,23 +1,23 @@
 @import 'src/Variables.scss';
 .header {
   display: flex;
-  align-items: end;
-  height: 15vh;
-  padding-top: 2rem;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: center;
+  height: fit-content;
+  padding: 1rem 0 1rem 0;
   font-size: $h5-font-size;
-  justify-content: space-between;
-  border-bottom: 0.1rem solid $orange;
+  background-color: $orange;
 }
 
 .leftSide {
   display: flex;
   flex-direction: row;
-  margin: 2rem;
   align-self: center;
   & > a {
-    padding-left: 3rem;
+    padding: 0 1rem 0 1rem;
     text-decoration: none;
-    color: $orange;
+    color: $neon;
   }
   > a:first-child {
     display: none;
@@ -26,36 +26,32 @@
 
 .frontDev {
   display: flex;
-  flex-wrap: nowrap;
-  font-size: $h2-font-size;
-  line-height: 0;
-}
-
-#front {
-  color: $orange;
-}
-
-#dev {
+  flex-wrap: wrap;
+  width: fit-content;
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+  line-height: 1;
+  font-size: $h1-font-size;
   color: $neon;
-  margin-left: 2rem;
 }
 
 .rightSide {
   display: flex;
   flex-direction: column;
   align-self: center;
-  padding-right: 3rem;
-  padding-bottom: 1rem;
+
   text-transform: lowercase;
   text-align: right;
 
   & > a {
+    padding: 0 1rem 0 1rem;
     text-decoration: none;
-    color: $light-gray;
+    color: $neon;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -69,12 +65,11 @@
   .leftSide {
     flex-direction: row;
     margin: 0;
-    padding-top: 1rem;
-    align-self: center;
+    padding-top: 2rem;
     background-color: $orange;
 
     & > a {
-      padding: 1rem 2rem 1rem 2rem;
+      padding-bottom: 1rem;
       text-decoration: none;
       color: $neon;
     }
@@ -83,10 +78,13 @@
     }
   }
   .frontDev {
-    flex-wrap: wrap;
-    padding: 1rem 0 2rem 1rem;
-    font-size: $h3-font-size * 1.3;
-    line-height: 0;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0 2rem 1rem;
+    text-align: left;
+    font-size: $h2-font-size;
+    line-height: $line-height-md;
+
     color: $neon;
     background-image: url(/assets/images/Background_main.png);
     background-size: cover;
@@ -94,14 +92,6 @@
     background-position: left top;
   }
 
-  #front {
-    color: $neon;
-  }
-
-  #dev {
-    color: $neon;
-    margin-left: 0;
-  }
   .rightSide {
     display: none;
   }

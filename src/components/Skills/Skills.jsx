@@ -4,10 +4,10 @@ import './Skill.scss';
 
 export default function Skills(props) {
   return (
-    <section id={props.id}>
-      <h2 id="skillHeader">Skills</h2>
+    <section id={props.id} className="Skills">
+      <h2>Skills</h2>
 
-      <div className="Skills">
+      <div>
         <SkillsCard />
         <PhotoCard />
       </div>

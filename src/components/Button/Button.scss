@@ -4,9 +4,9 @@ button {
   border: none;
   background-color: rgba(221, 229, 229, 0);
   text-transform: uppercase;
-  color: $bordo;
+  color: $neon;
 
-  :hover  {
+  :hover {
     border: 0.1rem solid $orange;
   }
 }
@@ -19,25 +19,22 @@ button {
   font-weight: 500;
   font-family: inherit;
   text-transform: uppercase;
-
-  
 }
 
 .button {
   @include standartButton;
   height: 90px;
-  width: 425px;
+  width: 500px;
   margin-bottom: 2rem;
   border-radius: 20px;
-  background-color: $neon;
+  background-color: $orange;
   cursor: pointer;
   transition: border-color 0.25s;
 
   a {
     text-decoration: none;
-    color: $bordo;
+    color: $neon;
   }
-  
 }
 .button:hover {
   border-color: $neon;
@@ -49,10 +46,11 @@ button {
 
 @media only screen and (max-width: 768px) {
   .button {
-    height: 90%;
-    width: 90%;
+    justify-self: auto;
+    height: 100%;
+    width: 95vw;
     padding: 1.5rem 0 1.5rem 0;
-    margin: 0 1rem 1.5rem 1rem;
+    margin: 0 auto 1.5rem 1rem;
     background-color: $orange;
     color: $neon;
 
@@ -61,6 +59,4 @@ button {
       color: $neon;
     }
   }
-
-
 }
