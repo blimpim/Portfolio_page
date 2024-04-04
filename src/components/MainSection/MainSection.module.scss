@@ -13,7 +13,7 @@
     display: flex;
     position: absolute;
     flex-direction: row;
-    top: 60vh;
+    top: calc(60vh + 2rem);
     right: 1rem;
     width: max-content;
     height: fit-content;
@@ -31,7 +31,7 @@
   height: 70vh;
   width: auto;
   margin-right: 2rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
   padding: 2rem 15rem 2rem 0;
   color: $orange;
 
